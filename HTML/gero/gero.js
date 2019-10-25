@@ -1,7 +1,7 @@
 document.getElementById("id_logic_version").innerHTML = "Logic version = 2019.10.25.0";
 
-window.addEventListener("deviceorientation", on _orientation_uab);
-window.addEventListener("devicemotion", on _motion_uab);
+window.addEventListener("deviceorientation", on_orientation_uab);
+window.addEventListener("devicemotion", on_motion_uab);
 
 function on_orientation_uab(e)
 {
