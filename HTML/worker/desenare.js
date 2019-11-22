@@ -1,11 +1,12 @@
-document.getElementById("id_logic").innerHTML = "Logic Version = 2019.11.01.0 ";
+document.getElementById("id_logic").innerHTML = "Logic Version = 2019.11.22.0 ";
 
 document.getElementById("id_start").addEventListener("click" , start);
 document.getElementById("id_stop").addEventListener("click" , stop);
 
-var time_id;
+	var time_id;
 	var unghi = {};
 	unghi.valoare=0;
+	var muncitor = null;
 
 function desenare(context, canvas, raza_mica, raza_mare, unghi)
 {
@@ -30,11 +31,17 @@ function start()
 	var canvas = document.getElementById("id_canvas");
 	var context = canvas . getContext("2d");
 	
-	var muncitor = new Worker("calcul.js");
-	muncitor.on_onmessage = function(e)
+	if (muncitor == null)
 	{
-		document.getElementById("id_prime").innerHTML = e.data;
-	} 
+	muncitor = new Worker("calcul.js");
+	muncitor.on_onmessage = function(e)
+		{
+			document.getElementById("id_prime").innerHTML = e.data;
+		} 
+		muncitor.postMessage("start");
+	}
+	else
+		muncitor.postMessage("start");
 
 	var raza_mare = 100;
 	var raza_mica = 10;
@@ -50,5 +57,7 @@ function stop()
 
 	document.getElementById("id_start").disabled = false;
 	document.getElementById("id_stop").disabled = true;
+	
+	muncitor.postMessage("stop");
 	
 }
