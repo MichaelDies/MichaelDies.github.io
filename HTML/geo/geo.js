@@ -8,9 +8,9 @@ function start()
 
 function on_ok_gps_uab(e)
 {
-
+	document.getElementById("id_geo").innerHTML = e.coords.latitude + " " + e.coords.longitude + " " + e.coords.accuracy;
 }
 function on_fail_gps_uab(e)
 {
-	
+	alert("Esec " + e);
 }
