@@ -1,7 +1,7 @@
 document.getElementById("id_logic_version").innerHTML = "2019.11.22.0";
 
 var video = document.getElementById("id_video");
-var c = {audio: true, video: { facingMode: "enviroment"}};
+var c = {audio: true, video: true};
 //then and catch method 
 navigator.mediaDevices.getUserMedia(c).then(on_ok_cam_uab).catch(on_fail_cam_uab);
 
