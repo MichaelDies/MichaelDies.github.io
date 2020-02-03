@@ -3,4 +3,4 @@ Autor : Dies Michael
 DESCRIRE : 
 TEHNOLOGII FOLOSITE : Javascript & HTML
 
-![Image of proiect] 
+![Image of proiect]  (MichaelDies.github.io/Snake.jpg)
