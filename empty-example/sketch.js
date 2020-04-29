@@ -12,7 +12,7 @@ function setup(scale) {
 
 function draw(draw) {
   let volume = input.getLevel();
-  let threshold = 0.15;
+  let threshold = 0.8;
   if (volume > threshold) {
     if (counter==0) {
       setTimeout(100);
