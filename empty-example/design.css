@@ -4,12 +4,12 @@ body {
 
 }
 body{
-height: 619px;
+height: 635px;
 background-color: white;
 background-image: linear-gradient(lightgreen, blue);
 }
 p {
-margin: auto;
+margin: 22;
  width: 60%;
  border: 3px solid #73AD21;
  padding: 10px;
