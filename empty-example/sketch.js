@@ -3,6 +3,7 @@ var startTime, endTime;
 var counter =0;
 var timeDiff;
 var speed;
+var energy;
 function setup() {
   createCanvas(20, 200);
   background(255);
@@ -12,45 +13,33 @@ function setup() {
 
 function draw() {
   let volume = input.getLevel();
-  let threshold = 0.4;
-
-
-
-
+  let threshold = 0.3;
   if (counter == 0) {
     if (volume > threshold) {
       //setTimeout(100);;
       startTime = Date.now()/1000;
       counter =1;
       //setTimeout(100);
-
     }
-
 }else if (counter == 1) {
       if (volume > threshold) {
         endTime = Date.now()/1000;
         counter=2;
-      //  volume = 0;
-        //setTimeout(100);
-          timeDiff = endTime - startTime;
+      //volume = 0;
+      //setTimeout(100);
+        timeDiff = endTime - startTime;
       }
-
-
     } else if (counter ==2){
         counter=0;
           if (timeDiff> 0) {
             speed = 10 / timeDiff;
-            document.getElementById("calculations"). innerHTML = "Speed = " + speed + "<br>" + "Time = " + timeDiff + "<br> " + "StartTtime = " + startTime + "<br> "  + "EndTime = " + endTime  ;
+            energy = (1/2) * 0.15 * (speed * speed);
+            document.getElementById("calculations"). innerHTML = "Speed = " + speed + "<br>" + "Time = " + timeDiff + "<br> " + "Energy = " + energy + "<br>" +"StartTtime = " + startTime + "<br> "  + "EndTime = " + endTime  ;
             setTimeout(100);
             //timeDiff=0;
 
           }
-
       }
-
-
-
-
 
   let y = map(volume, 0, 1, height, 0);
   let ythreshold = map(threshold, 0, 1, height, 0);
@@ -62,9 +51,4 @@ function draw() {
   rect(0, y, 20, y);
   stroke(0);
   line(0, ythreshold, 19, ythreshold);
-  //
-
-
-
-
 }
