@@ -5,19 +5,22 @@ var timeDiff;
 var speed;
 var energy;
 var weight;
-
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
 
 function setup() {
   createCanvas(20, 200);
   background(255);
   input = new p5.AudioIn();
   input.start();
-
+}
+slider.oninput = function() {
+  output.innerHTML = this.value;
 }
 function draw() {
   let volume = input.getLevel();
-  let threshold = 0.2;
-
+  let threshold = 0.15;
   if (counter == 0) {
   if (volume > threshold) {
         //setTimeout(100);;
@@ -37,7 +40,7 @@ function draw() {
                    if (timeDiff> 0) {
                       speed = 10 / timeDiff;
                       energy = (1/2) * 0.15 * (speed * speed);
-                      document.getElementById("calculations"). innerHTML = "Speed = " + speed + "<br>" + "Time = " + timeDiff + "<br> " + "Energy = " + energy + "<br>" +"StartTtime = " + startTime + "<br> "  + "EndTime = " + endTime  ;
+                      document.getElementById("calculations"). innerHTML = "Speed = " + speed + "<br>" + "Time = " + timeDiff + "<br> " + "Energy = " + energy + "<br>" +"StartTtime = " + startTime + "<br> "  + "EndTime = " + endTime ;
                       setTimeout(100);
                       //timeDiff=0;
                       }
