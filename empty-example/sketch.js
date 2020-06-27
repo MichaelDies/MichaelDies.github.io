@@ -4,48 +4,86 @@ var counter = 0;
 var timeDiff;
 var speed;
 var energy;
-var weight;
-var slider = document.getElementById("myRange");
-var output = document.getElementById("demo");
-output.innerHTML = slider.value;
+var max ;
+var max1;
+// function myFunction() {
+//   var table = document.getElementById("myRow");
+//   var row = table.insertRow(0);
+//   var cell1 = row.insertCell(0);
+//   row.innerHTML = "NEW CELL1";
+// }
+
+
+function start(){
+  input.start();
+}
+
 
 function setup() {
+
   createCanvas(20, 200);
   background(255);
   input = new p5.AudioIn();
   input.start();
-}
-slider.oninput = function() {
-  output.innerHTML = this.value;
-}
-function draw() {
-  let volume = input.getLevel();
-  let threshold = 0.15;
-  if (counter == 0) {
-  if (volume > threshold) {
-        //setTimeout(100);;
-        startTime = Date.now()/1000;
-        counter =1;
-        //setTimeout(100);
-      }
-  } else if (counter == 1) {
-          if (volume > threshold) {
-              endTime = Date.now()/1000;
-              counter=2;
-              timeDiff = endTime - startTime;
-              }
-            }
-              else if (counter ==2){
-                  counter=0;
-                   if (timeDiff> 0) {
-                      speed = 10 / timeDiff;
-                      energy = (1/2) * 0.15 * (speed * speed);
-                      document.getElementById("calculations"). innerHTML = "Speed = " + speed + "<br>" + "Time = " + timeDiff + "<br> " + "Energy = " + energy + "<br>" +"StartTtime = " + startTime + "<br> "  + "EndTime = " + endTime ;
-                      setTimeout(100);
-                      //timeDiff=0;
-                      }
-                    }
 
+
+}
+
+// slider.oninput = function() {
+//   output.innerHTML = this.value;
+//}
+function draw() {
+    let volume = input.getLevel();
+    let threshold = 0.15;
+
+    if (counter == 0){
+       if (volume > threshold) {
+         max = volume;
+         if (max > volume) {
+           volume = max;
+         }
+         else {
+           max = volume;
+         }
+            if (max = volume) {
+              startTime = Date.now()/1000;
+              counter = 1;
+            }
+        }
+      }
+
+       else if  (counter == 1){
+          if (volume > threshold) {
+            max1 = volume;
+            if (max1 > volume) {
+              volume = max1;
+            }
+            else {
+              max1 = volume;
+            }
+            if (max1 = volume) {
+              if (max > max1) {
+              endTime = Date.now()/1000;
+              timeDiff = endTime - startTime;
+              counter = 2;
+                    }
+                  }
+                }
+              }
+              else  if (counter == 2){
+                  if (timeDiff> 0) {
+                        speed = 10 / timeDiff;
+                        energy = (1/2) * 0.15 * (speed * speed);
+                        document.getElementById("calculations"). innerHTML = "Speed = " + speed + "  (KM/S)" +
+                         "<br>" + "Time = " + timeDiff + "  (Seconds)"
+                         + "<br> " + "Energy = " + energy + "  (Jol)"
+                         + "<br>" +"StartTtime = " + startTime + "  (Seconds)"
+                         + "<br> "  + "EndTime = " + endTime +"  (Seconds)" ;
+                        //setTimeout(100);
+                        counter = 0;
+                        }
+                      }
+//counter = 0;
   let y = map(volume, 0, 1, height, 0);
   let ythreshold = map(threshold, 0, 1, height, 0);
   noStroke();
@@ -56,4 +94,4 @@ function draw() {
   stroke(0);
   line(0, ythreshold, 19, ythreshold);
 
-}
+  }
