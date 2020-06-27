@@ -1,16 +1,21 @@
-body {
-  padding: 0;
-  margin: 0;
-
-}
 body{
 height: 635px;
-background-color: white;
+background-color: blue;
 background-image: linear-gradient(lightgreen, blue);
+padding: 0;
+margin: 0;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;
 }
 p {
 margin: 22;
- width: 60%;
+ width: 28%;
  border: 3px solid #73AD21;
  padding: 10px;
  color: black;
