@@ -30,7 +30,7 @@ function setup() {
 
 function draw() {
     let volume = input.getLevel();
-    let threshold = 0.60;
+    let threshold = 0.55;
 
     if (counter == 0){
        if (volume > threshold) {
