@@ -71,10 +71,10 @@ function draw() {
                         speed = 10 / timeDiff;
                         energy = (1/2) * 0.15 * (speed * speed);
                       alert( "Speed = " + speed + "  (KM/S)" +
-                         "<br>" + "Time = " + timeDiff + "  (Seconds)"
-                         + "<br> " + "Energy = " + energy + "  (Jol)"
-                         + "<br>" +"StartTtime = " + startTime + "  (Seconds)"
-                         + "<br> "  + "EndTime = " + endTime +"  (Seconds)" );
+                          "Time = " + timeDiff + "  (Seconds)"
+                          + "Energy = " + energy + "  (Jol)"
+                          +"StartTtime = " + startTime + "  (Seconds)"
+                          + "EndTime = " + endTime +"  (Seconds)" );
                         location.reload();
                         counter = 0;
                         }
