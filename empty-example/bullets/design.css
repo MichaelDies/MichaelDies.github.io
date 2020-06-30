@@ -1,0 +1,13 @@
+.table {
+  position: absolute; 
+  font-family: Arial;
+ color : white;
+}
+
+
+body {
+  background-image: url("sniper.jpg");
+  position: relative; 
+   background-size: cover;
+
+}
