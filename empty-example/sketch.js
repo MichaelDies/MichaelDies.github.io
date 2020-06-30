@@ -6,6 +6,7 @@ var speed;
 var energy;
 var max ;
 var max1;
+var max3;
 // function myFunction() {
 //   var table = document.getElementById("myRow");
 //   var row = table.insertRow(0);
@@ -31,7 +32,7 @@ function setup() {
 function draw() {
     let volume = input.getLevel();
     let threshold = 0.75;
-
+    max3 = volume;
     if (counter == 0){
        if (volume > threshold) {
          max = volume;
