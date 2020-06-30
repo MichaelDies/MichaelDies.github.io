@@ -26,15 +26,11 @@ function setup() {
   input = new p5.AudioIn();
   input.start();
 
-
 }
 
-// slider.oninput = function() {
-//   output.innerHTML = this.value;
-//}
 function draw() {
     let volume = input.getLevel();
-    let threshold = 0.15;
+    let threshold = 0.60;
 
     if (counter == 0){
        if (volume > threshold) {
@@ -74,12 +70,12 @@ function draw() {
                   if (timeDiff> 0) {
                         speed = 10 / timeDiff;
                         energy = (1/2) * 0.15 * (speed * speed);
-                        document.getElementById("calculations"). innerHTML = "Speed = " + speed + "  (KM/S)" +
+                      alert( "Speed = " + speed + "  (KM/S)" +
                          "<br>" + "Time = " + timeDiff + "  (Seconds)"
                          + "<br> " + "Energy = " + energy + "  (Jol)"
                          + "<br>" +"StartTtime = " + startTime + "  (Seconds)"
-                         + "<br> "  + "EndTime = " + endTime +"  (Seconds)" ;
-                        //setTimeout(100);
+                         + "<br> "  + "EndTime = " + endTime +"  (Seconds)" );
+                        location.reload();
                         counter = 0;
                         }
                       }
