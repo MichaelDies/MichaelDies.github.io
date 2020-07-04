@@ -15,46 +15,24 @@
   <script src="sketch.js"></script>
 
 </head>
-
 <body>
 
-
-       <div class="slidecontainer">
-
-      </div>
       <!-- <br>
 <button id="stop"> Stop </button>
 <button id="start"> Start </button>
 </br> -->
+<h2>Bullet Weight = <div><input type="number" id="w" value="0.1"></div></h2>
+<h2>Distance = <div><input type="number" id="d" value="10"></div></h2>
+
+
+<button  class="Distance" value="10" onclick="getDistance()"> Submit Values</button>
+<input type="button" class="again" value="Start Again" onClick="location.href=location.href">
+
+
 <form action="insert.php" method="POST">
     <table id="myRow">
-        <!-- <tr>
 
-          <th>Owner</th>
-          <th>Replica</th>
-          <th>Model</th>
-          <th>Manufacturer</th>
-          <th>Rated Speed</th>
-          <th>Measured Speed</th>
-
-        </tr>
-        <tr>
-          <tr>
-
-       <td><input id="Owner" type="text" name="Owner" ></td>
-       <td><input id="Replica" type="text" name="Replica"></td>
-       <td><input id="Model" type="text" name="Model"></td>
-       <td><input id="Manufacturer" type="text" name="Manufacturer"></td>
-       <td><input id="RatedSpeed" type="text" name="RatedSpeed"></td>
-       <td><input id="MeasuredSpeed" type="text" name="MeasuredSpeed"></td>
-           </tr>
-        </tr> -->
- <button type="button"><a href="http://localhost/bullets/conn.html">Add Data to tabel</a></button>
-
-         <br>
-        <input type="button" value="Start Again" onClick="location.href=location.href">
-
-
+        <button type="button" class="again1"><a href="http://localhost/bullets/conn.html">Add to Data</a></button>
 
 
       </table>
@@ -62,3 +40,4 @@
 
 </body>
 </html>
+
