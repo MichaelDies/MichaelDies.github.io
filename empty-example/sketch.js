@@ -4,9 +4,32 @@ this.counter = 0;
 var timeDiff;
 var speed;
 var energy;
+var distancefloated;
+var weightfloated;
 this.max = 0.10 ;
 var volume;
-this.threshold=0.1;
+this.threshold=0.13;
+var distance_entered;
+var weight_entered;
+
+function getDistance(){
+  distance_entered = document.getElementById("d").value;
+  weight_entered = document.getElementById("w").value;
+  distancefloated = parseFloat(distance_entered);
+  weightfloated = parseFloat(weight_entered);
+
+  if (distancefloated>0) {
+    if (weightfloated>0) {
+    input.start();
+  }
+  else {
+      alert("The Distance or the Weight is Zero ...");
+    }
+}
+else {
+    alert("The Distance or the Weight is Zero ...");
+  }
+}
 // function myFunction() {
 //   var table = document.getElementById("myRow");
 //   var row = table.insertRow(0);
@@ -15,27 +38,19 @@ this.threshold=0.1;
 // }
 
 
-
-function start(){
-  input.start();
-}
-
-
 function setup() {
 
   createCanvas(20, 200);
   background(255);
   input = new p5.AudioIn();
-  input.start();
 
 }
 
 function draw() {
-
+speed = parseFloat(speed);
     setInterval(()=>{
-
-
       volume = input.getLevel();
+
 
     //max = volume;
     if (volume > threshold) {
@@ -54,15 +69,20 @@ function draw() {
             endTime = Date.now()/1000;
             timeDiff = endTime - startTime;
               input.stop();
-                  speed = 10 / timeDiff; // the target is suppost to be at 10 meters, because speed is distance / time.
-                  energy = (1/2) * 0.2 * (speed * speed); //
-                  document.getElementById("calculations"). innerHTML = "Speed = " + speed + "  (KM/S)"
+              if (distance_entered>0) {
+                if (weight_entered>0) {
+                speed = distance_entered / timeDiff; // the target is suppost to be at 10 meters, because speed is distance / time.
+                energy = (1/2) * weight_entered * (speed * speed); //
+              }
+            }
+
+                  document.getElementById("calculations"). innerHTML =
+                                                              "Speed = " + speed + "  (KM/S)"
                                                              + "<br>" + "Time = " + timeDiff + "  (Seconds)"
-                                                             + "<br>" + "Energy = " + energy + "  (Jol)"
+                                                             + "<br>" + "Energy = " + energy + "  (Jols)"
                                                              + "<br>" + "StartTtime = " + startTime + "  (Seconds)"
                                                              + "<br>" + "EndTime = " + endTime +"  (Seconds)" ;
                     counter =0;
-                  //location.reload();
           }
           else {
             max = volume;
@@ -84,3 +104,4 @@ function draw() {
   line(0, ythreshold, 19, ythreshold);
 
   }
+
