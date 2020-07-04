@@ -14,25 +14,25 @@ th, td {
   text-align: left;
 }
 p {
-margin: 22;
+ margin: 22;
  width: 22%;
  border: 3px solid lightblue;
  padding: 10px;
  color: white;
-text-shadow: 2px 2px 5px red;
+ text-shadow: 2px 2px 5px red;
 }
 h1 {
   margin: auto;
   color : white;
   text-shadow: 2px 2px 5px red;
 }
-body {
-  background-image: url("sniper1.jpg");
-  position: relative;
-  background-size: cover;
-
+h2 {
+  margin: auto;
+  color : white;
+  padding: 10px;
+ text-shadow: 2px 2px 5px red;
 }
-.again {
+.Distance {
   background-color: #4CAF50; /* Green */
   border: none;
   color: purple;
@@ -43,5 +43,53 @@ body {
   font-size: 14px;
   margin: 4px 2px;
   cursor: pointer;
+}
+.Weight {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: purple;
+  padding: 14px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+body {
+  background-image: url("sniper1.jpg");
+  position: relative;
+  background-size: cover;
+
+}
+.again {
+  background-color: orange; /* Green */
+  border: none;
+  color: purple;
+  padding: 14px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.again1 {
+  background-color: lightblue; /* Green */
+  border: none;
+  color: purple;
+  padding: 14px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+div {
+  width: 22%;
+  padding: 10px;
+  border: 3px solid lightblue;
+  margin: 0;
 }
 
