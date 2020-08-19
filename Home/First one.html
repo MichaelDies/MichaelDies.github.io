@@ -3,28 +3,116 @@
 <head>
 	<script src="calcu.js"></script>
 </head>
+<style> 
+<style>
+
+label{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  float: left;
+}
+
+label {
+  font-size: 25px;
+  font-family:  New Times Roman;
+  font-style: italic;
+  text-shadow: 2px 2px 5px blue;
+  margin: auto;
+  padding: 1px;
+  color: white;
+  text-align: left;
+
+}
+
+h2 {
+  font-size: 35px;
+  font-family:  New Times Roman;
+  font-style: italic;
+  text-shadow: 2px 2px 5px red;
+  margin: auto;
+  text-align: left;
+}
+
+
+div {
+  border-radius: 5px;
+  padding: 5px;
+  margin: auto;
+}
+
+.txt {
+ 
+  width: 13%;
+  padding: 5px 7px;
+  margin: 8px 20;
+  border: 2px solid blue;
+  border-radius: 4px;
+  box-sizing: border-box;
+
+}
+
+.calcu {
+  background-color: red; /* Green */
+  color: black;
+  padding: 14px 16px;
+  text-align: center;
+  display: inline-block;
+  border-radius: 4px;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+body {
+  background-image: url("1.jpg");
+  position: relative;
+  background-size: cover;
+
+}
+h3 {
+ margin: 22;
+ width: 50%;
+ padding: 10px;
+ color: black;
+ font-size: 20px;
+ text-shadow: 2px 2px 5px blue;
+}
+
+
+
+
+</style>
 <body>
-	<form>
-		<h2> Brick Dimentions</h2>
-	
-
-	<label for="brick1">Length:</label>
-	<div><input type="number" id="l" value="0.0"></div><br>
-
-	<label for="brick2">Hight:</label>
-	<div><input type="number" id="h" value="0.0"></div><br>
-	</form>
 
 	<form>
-		<h2> Wall Dimentions</h2>
-		<label for="wall">Hight:</label>
-	<div><input type="number" id="h1" value="0.0"></div><br>
-	<label for="wall1">Lenght:</label>
-	<div><input type="number" id="l1" value="0.0"></div><br>
+    	<h2> Brick Dimensions</h2>
+    	<div><label> Length <input type="number" id="l" class="txt" value="0.0"></div><br></label>
+    	<div><label> Hight <input type="number" id="h" class="txt" value="0.0"></div><br></label>
 	</form>
 
-	<button onclick="Calculate()">Calculate</button>
-	<p id="calculations"></p>
+
+	<form>
+    	<h2> Wall Dimensions</h2>
+    	<br>
+    	<div><label> Length <input type="number" class="txt" id="l1" value="0.0"></div><br></label>
+    	<div> <label> Hight <input type="number" class="txt" id="h1" value="0.0"></div><br></label>
+	</form>
+
+
+  <form class="mid">
+      <h2> Window Dimensions</h2>
+      <br>
+      <div><label> Length <input type="number" class="txt" id="wl" value="0.0"></div><br></label>
+      <div> <label> Hight <input type="number" class="txt" id="wh" value="0.0"></div><br></label>
+  </form>
+
+	<button onclick="Calculate()" id="click" class="calcu">Calculate</button>
+	<h3 id="calculations"></h3>
 </body>
 
 </html>
