@@ -9,6 +9,7 @@ body {
  background-size: 45%;
  min-width: 640px;
 }
+}
 
 ul {
   list-style-type: none;
@@ -72,4 +73,4 @@ footer {
   font-weight: bold;
   /*font-variant: small-caps;*/
 }
-}
+
