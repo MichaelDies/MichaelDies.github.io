@@ -1,0 +1,61 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+ background:  url("4.jpg") fixed center ; 
+ background-color: #cccccc;
+ background-size: 45%;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+  font-variant: small-caps;  /*you can change the font og the navigation */
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 15px 20px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+p {
+	font-family: "Lucida Console", Courier, monospace;
+	font-size: 35px;
+	color: black;
+	font-style: normal;
+	font-weight: bold;
+	font-variant: small-caps;
+	
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
