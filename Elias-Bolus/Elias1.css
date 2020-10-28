@@ -2,67 +2,93 @@
 html {
   scroll-behavior: smooth;
 }
-body {
- background:  url("4.jpg") fixed center ; 
- background-color: #cccccc;
- background-size: 45%;
- min-width: 640px;
-}
-
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
-
-li {
-  float: left;
-  font-variant: small-caps;  /*you can change the font of the navigation bar */
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 15px 20px;
-  text-decoration: none;
-}
-
-li a:hover {
-  background-color: #111;
-}
-
-p {
-	font-family: "Lucida Console", Courier, monospace;
-	font-size: 35px;
-	color: black;
-	font-style: normal;
-	font-weight: bold;
-	font-variant: small-caps;
-	
-}
 
 * {
   box-sizing: border-box;
 }
 
-.column {
-  float: left;
-  width: 33.33%;
-  padding: 5px;
+body {
+ background: url("2.png") fixed center ; 
+ background-color: #cccccc;
+ background-size: 100%;
+min-width: 640px;
 }
 
-/* Clearfix (clear floats) */
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0px;
+  padding-top: 20px;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+
 }
-div.row {
+
+li {
+  float: left;
+  font-family: 'Montserrat';
+  font-weight: bolder;
+  font-size: 20px;
+  font-variant: small-caps;  /*you can change the font of the navigation bar */
+  justify-content: space-around; 
+  display: flex;
+}
+
+li a {
+  display: block;
+  color: black; 
+  padding: 15px 50px;
+  text-decoration: none;
+}
+
+.button {
+  background-color: red; 
+  border: none;
+  font-family: 'Tajawal', sans-serif;
+  color: white;
   
+  padding: 2px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 2px;
+  cursor: pointer;
+  border-radius: 50px; 
+}
+
+z{
+  color:red; 
+  font-family: 'Tajawal', sans-serif;
+  font-size: 14.5px;
+  font-weight: 900;
+  justify-content: space-around; 
+  display: flex;
+}
+
+.arab {
+
+	font-size: 70px;
+	color: black;
+  font-kerning: none;
+	font-weight: bolder;
+	font-variant: small-caps;
+  text-align: center;
+  margin-top: 195px;
+  font-family: 'Tajawal', sans-serif;
+}
+
+.eng {
+
+  font-size: 70px;
+  color: black;
+  font-kerning: none;
+  font-weight: bolder;
+  font-variant: small-caps;
+  text-align: center;
+  font-family: 'Montserrat';
 }
 
 footer {
