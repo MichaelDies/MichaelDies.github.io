@@ -1,17 +1,26 @@
 
+
+
 * {
   box-sizing: border-box;
 }
 
-@media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
+
+@font-face {
+src:url(fonts/Tarhaal-Rounded.otf);
+font-family: Tarhaal;
+font-family: 'Montserrat', sans-serif;
+font-style: normal;
+font-stretch: 1% 500%; /* Required by Chrome */
 }
 
 body {
- background: url("9.png") fixed center ; 
+ background: url("10.png") fixed center ; 
  background-color: #cccccc;
- background-size: 100%;
+ background-size: cover;
+ background-repeat: no-repeat;
  min-width: 640px;
+ margin: 0;
 }
 
 ul {
@@ -22,22 +31,25 @@ ul {
   overflow: hidden;
   position: fixed;
   top: 0;
-  left: 0;
+  display: inline;
+  text-align: center;
+
   }
 
 ul li {
   display:inline-block; 
-  position:relative;
+  position:relative; 
 }
 
 ul li:not(:last-child)::after{
-  content:""; 
-  border:1px solid black;
-  border-width: 1px 2px 0 0;
-  position:absolute; 
-  right:-3px; 
-  top:0; 
-  height:60px;
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 60%;
+  right: 0;
+  background: black;
+  top: 50%;
+  transform: translate(0, -50%);
 }
 
 li {
@@ -48,76 +60,150 @@ li {
   font-variant: small-caps;  /*you can change the font of the navigation bar */
   justify-content: space-around; 
   display: flex;
-  
+
 }
 
 li a {
   display: block;
   color: black; 
-  padding: 15px 50px;
+  padding: 5px 42px;
+  padding: fixed;
   text-decoration: none;
 }
 
 .button {
-  background-color: red; 
+  background-color: #e50000; 
   border: none;
-  font-family: 'Tajawal', sans-serif;
+  font-family: Tarhaal;
   color: white;
-  padding: 2px 40px;
+  padding: 2px 18px;
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 10px 10px;
+  font-size: 18px;
+  margin: 5px 30px;
   cursor: pointer;
   border-radius: 50px; 
+  height: 54px;
+  float: right;
+  display: block;
+}
+
+.btn{
+  color: white;
+  font-size: 23px;
 }
 
 z{
-  color:red; 
-  font-family: 'Tajawal', sans-serif;
-  font-size: 14.5px;
-  font-weight: 900;
+  color:#e50000; 
+  font-family: Tarhaal;
+  font-size: 19px;
+  font-weight: 600;
   justify-content: space-around; 
   display: flex;
 }
 
+x {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: bolder;
+  justify-content: space-around; 
+  padding: 0px 0px;
+}
 
 .arab {
-
-	font-size: 70px;
+	font-size: 103px;
 	color: black;
   font-kerning: none;
-	font-weight: bolder;
-	font-variant: small-caps;
-  text-align: center;
-  margin-top: 195px;
-  font-family: 'Tajawal', sans-serif;
-
+	font-weight: normal;
+  font-family: Tarhaal;
 }
 
 .eng {
-
-  font-size: 70px;
+  font-size: 32px;
   color: black;
-  font-kerning: none;
-  font-weight: bolder;
-  font-variant: small-caps;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  display: inline-block;
+  letter-spacing: 24.5px;
+}
+  
+.center{
   text-align: center;
-  font-family: 'Montserrat';
+  padding: 132px 0;
 }
 
 footer {
   font-family: 'Montserrat';
   color: black;
-  font-weight: bold;
+  font-weight: bolder;
+  padding: 0px 27px;
   /*font-variant: small-caps;*/
 }
 
 .icons{
-  padding: 2px 50px;
+  padding: 0px 50px;
 }
 
 div a {
   padding: 2px 6px;
 }
+
+
+
+@media only screen and (max-width: 414px) {
+
+  .arab {
+    font-size: 53px;
+  }
+
+  .eng {
+    font-size: 16px;
+    letter-spacing: 13.5px;
+  }
+    
+  .center{
+    text-align: center;
+    padding: 190px 0;
+    }
+
+  li { 
+      font-size: 12px; 
+    }
+
+  li a {
+      padding: 1px 10px;
+    }
+
+  z{
+      font-size: 12px; 
+    }
+
+  .button {
+      padding: 2px 5px;
+      margin: 0px 10px;
+      height: 35px;
+    }
+  
+  x {
+    font-size: 10px;
+    padding: 0px 0px;
+  }
+
+  .btn{
+  font-size: 13.5px;
+  }
+
+  .fa fa-shopping-cart{
+    font-size:14px
+  }
+
+  body {
+   background-size: fixed; /*until he will give me a phone photo*/
+  }
+
+  footer {
+    padding: 620px 27px;
+  }
+
+}
+
+
