@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	
+   <script>
+	$(document).ready(function() {
+  $('close').css('display', 'none');
+  $('close').fadeIn(1000);
+  $('.link').click(function(event) {
+    event.preventDefault();
+    newLocation = $('.link a').attr("href");
+    $('close').fadeOut(1000, newpage);
+  });
+  function newpage() {
+    window.location = newLocation;
+  }
+});
+    </script>
+
+</head>
+
+<body>
+	<div class="close">
+    <a><img src="1.png" style="width:1309px; height : 600px;" href="Elias.html"></a>
+    <div class="lr">
+        <div class="rl"></div>
+    </div>
+</div>
+
+</body>
+</html>
