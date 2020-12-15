@@ -9,7 +9,7 @@ previews.forEach((preview) =>{
         original.classList.add("open");
         //change text and img everyclick
         const originalSrc = preview.getAttribute("data-original");
-        original.src = `./Crosses/${originalSrc}`;
+        original.src = `./Crosses-Main/${originalSrc}`;
         const altText = preview.alt;
         caption.textContent = altText;
     });
