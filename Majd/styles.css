@@ -42,9 +42,9 @@ header{
 .navbar li {
 float: left;
 width: 100px;
-height: 30px;
-opacity: .8;
-line-height: 40px;
+height: 32px;
+opacity: .9;
+line-height: 29px;
 text-align: center;
 }
 
@@ -59,10 +59,19 @@ text-align: center;
   color: #0088a9;
 }
 
+.navbar li ul li a{
+    color: black;
+    font-weight: bolder;
+    font-size: 17px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background: rgb(158, 158, 158);
+    
+}
+
 .navbar li ul li {
     list-style: none;
     display: none;
-    
 } 
 
 .navbar li:hover ul li{
@@ -99,7 +108,7 @@ button:hover{
 
 .gallary img{
     width: 100%;
-    height: 100%;
+    height: 500px;
     object-fit: cover;
     transition: all 0.3s ease-out;
     cursor: pointer;
@@ -123,7 +132,7 @@ button:hover{
 }
 
 .modal p{
-    color: white;
+    color: black;
     font-size: 2rem;
     position: absolute;
     bottom: 5%;
@@ -137,17 +146,23 @@ button:hover{
     pointer-events: all;
 }
 
+
 .full-img{
     position: absolute;
     height: 70%;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(0.5);
+    transform: translate(-50%, -50%) scale(1.5);
     transition: all 0.25s ease-out;
 }
 
+
 .full-img.open{
-    transform: translate(-50%, -50%) scale(1.3);
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+.modal .full-img.open:hover{
+    transform: translate(-50%, -50%) scale(2);
 }
 
 
