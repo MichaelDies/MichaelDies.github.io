@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #24252A;
+}
+
+li, a, button{
+    font-family: "Monsterrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+.logo{
+    cursor: pointer;
+    width: 100px;
+    font-style: italic;
+    color: rosybrown;
+}
+
+.navbar{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.navbar li {
+float: left;
+width: 100px;
+height: 32px;
+opacity: .9;
+line-height: 29px;
+text-align: center;
+}
+
+.navbar li a{
+    transition: all 0.4s ease 0s;
+    text-decoration: none;
+    color: white;
+    display: block;
+   
+}
+.navbar li a:hover{
+  color: #0088a9;
+}
+
+.navbar li ul li a{
+    color: black;
+    font-weight: bolder;
+    font-size: 17px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background: rgb(158, 158, 158);
+    
+}
+
+.navbar li ul li {
+    list-style: none;
+    display: none;
+} 
+
+.navbar li:hover ul li{
+    display: block;
+}
+
+button{
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover{
+    background-color: rgba(0, 136, 169, 0.8);
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+    background: #f2f2f2;
+    overflow: auto;
+}
+
+.gallary{
+   overflow: hidden;
+   margin: 5px;
+   border: 1px solid #ccc;
+   float: left;
+   width: 390px;
+}
+
+.gallary img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+}
+
+.gallary img:hover{
+    transform: scale(1.2);
+}
+
+
+.modal{
+    background: rgba(0,0 ,0 ,0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.25s ease-out;
+}
+
+.modal p{
+    color: black;
+    font-size: 2rem;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, -5%);
+}
+
+
+.modal.open{
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+.full-img{
+    position: absolute;
+    height: 70%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.5);
+    transition: all 0.25s ease-out;
+}
+
+
+.full-img.open{
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+.modal .full-img.open:hover{
+    transform: translate(-50%, -50%) scale(2);
+}
+
+
+/* .container{
+    max-width: 1200px;
+    margin: auto;
+    background: #f2f2f2;
+    overflow: auto;
+}
+
+.gallary{
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 390px;
+}
+
+.gallary img{
+    width: 100%;
+    height: 100%;
+}
+
+.desc{
+    padding: 15px;
+    text-align: center;
+
+} */
+
+/* .bethlehem{
+    width: 700px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+} */
+ 
+.desc{
+    padding: 15px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    text-align: justify;
+    text-justify: inter-word;
+    
+} 
+
+/* .header{ 
+
+     color: grey;
+     font-family: 'Montserrat', sans-serif;
+     font-weight: bold;
+     font-size: 35px;
+     padding: 20px;
+   } */
+
+   .header{ 
+    color: rgb(134, 238, 203);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+    padding: 40px 20px;
+  }
+
+   .info p{
+       padding: 30px 150px;
+       font-size: 20px;
+       color: white;
+       font-family: 'Montserrat', sans-serif;
+       font-weight: 400;
+   }
+
+   /* .snowflake {
+    color: #fff;
+    font-size: 2em;
+    font-family: Arial;
+    text-shadow: 0 0 1px #000;
+  }
+  
+  @-webkit-keyframes snowflakes-fall
+  {0%{top:-10%}100%{top:100%}}
+  @-webkit-keyframes snowflakes-shake{
+    0%{
+      -webkit-transform:translateX(0px);transform:translateX(0px)}50%
+    {
+      -webkit-transform:translateX(80px);transform:translateX(80px)}
+      100%{-webkit-transform:translateX(0px);transform:translateX(0px)}
+    }
+    @keyframes snowflakes-fall
+    {0%{top:-10%}100%{top:100%}}
+    @keyframes snowflakes-shake
+    {0%{transform:translateX(0px)}50%{transform:translateX(80px)}100%{transform:translateX(0px)}}
+    .snowflake
+    {position:fixed;top:-10%;z-index:9999;
+      -webkit-user-select:none;
+      -moz-user-select:none;
+      -ms-user-select:none;
+      user-select:none;cursor:default;
+      -webkit-animation-name:snowflakes-fall,snowflakes-shake;
+      -webkit-animation-duration:10s,3s;
+      -webkit-animation-timing-function:linear,ease-in-out;
+      -webkit-animation-iteration-count:infinite,infinite;
+      -webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;
+      animation-duration:6s,4s;
+      animation-timing-function:linear,ease-in-out;
+      animation-iteration-count:infinite,infinite;
+      animation-play-state:running,running
+      }
+      .snowflake:nth-of-type(0)
+      {
+        left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s
+      }
+      .snowflake:nth-of-type(1)
+      {
+        left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s
+        }
+        .snowflake:nth-of-type(2)
+        {
+          left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s
+          }
+          .snowflake:nth-of-type(3)
+          {
+            left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s
+            }
+            .snowflake:nth-of-type(4)
+            {
+              left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s
+              }
+              .snowflake:nth-of-type(5)
+              {left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s
+                }
+                .snowflake:nth-of-type(6)
+                {
+                  left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s
+                  }
+                  .snowflake:nth-of-type(7)
+                  {
+                    left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s
+                    }
+                    .snowflake:nth-of-type(8)
+                    {
+                      left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s
+                      }
+                      .snowflake:nth-of-type(9)
+                      {
+                        left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s
+                      } */
+                      
