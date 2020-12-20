@@ -66,6 +66,16 @@ header{
     display: block;
 }
 
+.navbar li ul li a{
+    color: black;
+    font-weight: bolder;
+    font-size: 17px;
+    border: 2px solid black;
+    border-radius: 8px;
+    background: rgb(158, 158, 158);
+    
+}
+
 button{
     padding: 9px 25px;
     background-color: rgba(0, 136, 169, 1);
@@ -94,7 +104,7 @@ button:hover{
 }
 
 .header{ 
-     color: grey;
+    color: rgb(134, 238, 203);
      font-family: 'Montserrat', sans-serif;
      font-weight: bold;
      font-size: 35px;
@@ -107,6 +117,8 @@ button:hover{
      font-weight: inherit;
      font-size: 21px;
    }
+
+   
    .content2 p{
     color: white;
     font-family: 'Montserrat', sans-serif;
@@ -127,7 +139,4 @@ button:hover{
     text-align: justify;
     float: left;
 }
-
-
-
 
