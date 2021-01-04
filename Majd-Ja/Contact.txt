@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width , initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+	<title></title>
+</head>
+<body>  
+    <header>
+        <a class="logo">Jaraysa Co.</a>
+        <!-- <img class="logo" src="logo.png" alt="logo"> -->
+        
+        <div>
+            <ul class="navbar">
+                <li><a href="Majd.html">Home</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="#">Shop</a>
+                    <ul>
+                        <li><a href="Crosses.html">Crosses</a></li>
+                        <li><a href="Ornaments.html">Ornaments</a></li>
+                        <li><a href="#">Grtoots</a></li>
+                        <li><a href="#">Link 4</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <a class="cont" href="contact.html"><button>Contact</button></a>
+    </header>
+
+    <center class="header">Welcome to Holy Family Co. Olive Wood Crafts!</center> 
+    <br>
+    <div class="info">
+        <p> CONTACT <br>
+            Holy Family Co.<br>
+            Jaraysa Olive Wood<br>
+            since 1950<br>
+            Jaraysa Family<br>
+            <br>
+            Shop and Workshop<br>
+            Beit Sahur. Bethlehem<br>
+            Palestine<br>
+            Email. majdjarayseh11@outlook.com<br>
+            Tele. +972 2-277-4859<br>
+            Mob. +972 568-318-789  <br>
+            WhatsApp. +39 388-1463-692
+        </p>
+
+    </div>
+    
+    
+    </body>
+</html>
