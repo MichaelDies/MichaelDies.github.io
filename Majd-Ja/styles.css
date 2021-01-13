@@ -359,40 +359,6 @@ font-size: 30px;
 
 /*********** Shopping images pages end *********/
 
-
-/* .container{
-    max-width: 1200px;
-    margin: auto;
-    background: #f2f2f2;
-    overflow: auto;
-}
-
-.gallary{
-    margin: 5px;
-    border: 1px solid #ccc;
-    float: left;
-    width: 390px;
-}
-
-.gallary img{
-    width: 100%;
-    height: 100%;
-}
-
-.desc{
-    padding: 15px;
-    text-align: center;
-
-} */
-
-/* .bethlehem{
-    width: 700px;
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-} */
  
 .desc{
     padding: 10px;
@@ -401,33 +367,20 @@ font-size: 30px;
     text-align: justify;
     font-family: 'Montserrat', sans-serif;
 } 
-
-/* .header{ 
-
-     color: grey;
-     font-family: 'Montserrat', sans-serif;
-     font-weight: bold;
-     font-size: 35px;
-     padding: 20px;
-   } */
-
-   .header{ 
+.header{ 
     color: rgb(134, 238, 203);
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     font-size: 35px;
     padding: 40px 20px;
-  }
-
-   .info p{
+}
+.info p{
        padding: 30px 150px;
        font-size: 20px;
        color: white;
        font-family: 'Montserrat', sans-serif;
        font-weight: 400;
-   }
-
-
+}
 /* .img1{
     width: 500px;
     height: 300px;
@@ -482,6 +435,77 @@ font-size: 30px;
 .background-top{
     border-radius: 10px;
 }
+
+/* ----------- POST SLIDER START ------------------ */
+
+.page-wrapper a:hover{
+    color: #006669;
+}
+
+.post-slider{
+    position: relative;
+}
+
+.post-slider .slider-title{
+    text-align: center;
+    margin: 30px auto;
+    font-family: 'Montserrat', sans-serif;
+    color: #c3c3c3;
+}
+
+.post-slider .next{
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    font-size: 3em;
+    color : #006669;
+    cursor: pointer;
+    }
+
+.post-slider .prev{
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    font-size: 3em;
+    color : #006669;
+    cursor: pointer;
+}
+
+.post-slider .post-wrapper{    
+    width: 84%;
+    height: 350px;
+    overflow: hidden;
+    padding: 10px 0px 10px 0px;
+    margin: 0 auto;
+}
+
+.post-slider .post-wrapper .post{
+    height: 330px;
+    width: 300px;
+    margin: 0px 10px;
+    display: inline-block;
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 1rem 1rem 1rem -1rem black;
+}
+
+.post-slider .post-wrapper .post .slider-image{
+    width: 100%;
+    height: 250px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.post-slider .post-wrapper .post .post-info{
+    height: 80px;
+    padding: 0px 5px;
+}
+
+.post-info h4 a{
+    color: black;
+}
+
+/* ----------- POST SLIDER END ------------------ */
+
 
 /* ---------------------- CART PAGE START ----------------------*/
 
@@ -580,9 +604,9 @@ font-size: 30px;
     width: 0%;
 }
 
-
-
 /*---------------------- CART PAGE STOP ------------------------*/
+
+
 
 .gotop{
     position: fixed;
@@ -834,8 +858,7 @@ img {
         margin: auto;
         background: #f2f2f2;
         overflow: auto;
-        padding: 2% ;
-        
+        padding: 2%;
     }
     .shop-photo-img{
         overflow: hidden;
