@@ -1737,7 +1737,7 @@ img {
         border-radius: 10px;
         float: left;
         width: 32%;
-        max-height: 240px;
+        max-height: 235px;
      }
 
      .shop-photo-img img {
@@ -1752,7 +1752,7 @@ img {
     .shop-img-info{
         padding: 17px;
         text-align: center;
-        font-size: 14px;
+        font-size: 12px;
         font-weight: 700;
         color: rgb(0, 0, 0);
         font-family: 'Montserrat', sans-serif;
